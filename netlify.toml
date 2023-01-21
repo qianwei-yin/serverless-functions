@@ -1,0 +1,8 @@
+[build]
+    functions = "./functions"
+
+[[redirects]]
+    from = "/api/*"
+    to = "/.netlify/functions/:splat"
+    # to make sure the url will first go to /api/* and then back to /.netlify/functions/:splat
+    status = 200
