@@ -4,11 +4,11 @@ const alert = document.querySelector('.alert');
 const result = document.querySelector('.result');
 alert.style.display = 'none';
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
 	e.preventDefault();
 	const city = input.value;
 	if (city) {
-		getWeatherData(city);
+		await getWeatherData(city);
 	}
 });
 
